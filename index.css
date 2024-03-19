@@ -1,0 +1,141 @@
+html body {
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.d-flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+.header .header-logo {
+  height: 60px;
+}
+.header .cart-logo {
+  height: 20px;
+  margin-right: 5px;
+}
+.search-container .search-text {
+  width: 25%;
+  padding: 10px;
+}
+.restaurant-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  justify-content: center;
+}
+.div-img {
+  height: 200px;
+  width: 300px;
+}
+.div-img img {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border-radius: 12px;
+}
+.card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s linear;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.card:hover,
+.menu-item:hover {
+  box-shadow: inset 0px 0px 18px 0px rgb(220, 220, 220) !important;
+}
+.ratings {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+}
+.card-body {
+  width: 300px;
+}
+.ShimmerCard {
+  height: 200px;
+  width: 300px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+.ShimmerText {
+  width: 300px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: lightgray;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.details-resto-image {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+.RestroCard {
+  text-align: center;
+  padding: 20px;
+  background: #d8d8d8;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 25px;
+  justify-content: center;
+  gap: 21px;
+}
+.menu-item {
+  border-radius: 5px;
+  gap: 10px;
+  width: 400px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #d6cfcf;
+}
+.menu-item img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.menu-item-dis {
+  border-radius: 5px;
+  gap: 10px;
+  width: 300px;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #d6cfcf;
+  background: #dead53;
+}
+.restautrant-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
