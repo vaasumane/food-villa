@@ -11,9 +11,9 @@ const useFetchRestaurantMenu = (resId) => {
   const getResturantInfo = async () => {
     const data = await fetch(RESTAURANT_MENU_CDN + resId);
     const restaurant = await data.json();
-    setRestaurant(restaurant?.data?.cards?.[0]?.card?.card?.info);
+    setRestaurant(restaurant?.data?.cards?.[2]?.card?.card?.info);
     setrestaurantMenu(
-      restaurant?.data?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR
+      restaurant?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR
         ?.cards?.[2]?.card?.card?.itemCards
     );
   };

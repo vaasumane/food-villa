@@ -34,14 +34,12 @@ const Body = () => {
     setFilteredRestaurants(filteredRestaurants);
   }
 
-  return AllRestaurants?.length === 0 ? (
-    <Shimmer />
-  ) : (
+  return (
     <>
-      <div className="search-container d-flex justify-center">
+      <div className="flex justify-center py-10 ">
         <input
           type="text"
-          className="search-text"
+          className="lg:w-1/4 p-3 bg-gray-100 border focus:border-red-500"
           placeholder="Search here..."
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
@@ -49,18 +47,26 @@ const Body = () => {
         <button
           type="button"
           onClick={() => filterList(searchText, AllRestaurants)}
+          className="p-2 bg-purple-600 rounded-md text-white"
         >
           Search
         </button>
       </div>
-      <div className="restaurant-list">
-        {FilteredRestaurants &&
-          FilteredRestaurants.map((restaurant) => (
-            <Link to={"/restaurant/"+restaurant.info.id} key={restaurant.info.id}>
-              <RestaurantCard  {...restaurant.info} />
-            </Link>
-          ))}
-      </div>
+      {AllRestaurants?.length === 0 ? (
+        <Shimmer />
+      ) : (
+        <div className="flex flex-wrap gap-5 p-5 justify-center">
+          {FilteredRestaurants &&
+            FilteredRestaurants.map((restaurant) => (
+              <Link
+                to={"/restaurant/" + restaurant.info.id}
+                key={restaurant.info.id}
+              >
+                <RestaurantCard {...restaurant.info} />
+              </Link>
+            ))}
+        </div>
+      )}
     </>
   );
 };

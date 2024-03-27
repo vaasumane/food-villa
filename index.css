@@ -1,4 +1,7 @@
-html body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* html body {
   font-family: sans-serif;
 }
 a {
@@ -138,4 +141,4 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
+} */

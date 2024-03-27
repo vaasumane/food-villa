@@ -3,12 +3,12 @@ import React from 'react'
 const Shimmer = () => {
     return (
         <>
-            <div className='restaurant-list'>
+            <div className='flex flex-wrap gap-5 p-5 justify-center'>
                 {Array(10).fill("").map((e,index) => (
-                <div className='cardShimmer' key={index}>
-                    <div className='ShimmerCard'></div>
-                    <span className='ShimmerText'></span>
-                    <span className='ShimmerText'></span>
+                <div className='' key={index}>
+                    <div className='h-52 w-80 rounded-lg p-5 m-3 bg-gray-200'></div>
+                    <span className='w-80 p-1 m-3 rounded-lg bg-gray-200 shadow block'></span>
+                    <span className='w-80 p-1 m-3 rounded-lg bg-gray-200 shadow block'></span>
                 </div>
 
                 ))}
