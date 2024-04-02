@@ -73,7 +73,7 @@ const RestaurantMenu = () => {
               </h2>
               <div className="lg:flex justify-center  lg:flex-wrap">
                 {restaurantMenu &&
-                  restaurantMenu.length > 0 &&
+                  restaurantMenu.length > 0 ?
                   restaurantMenu.map((menu) => (
                     <div
                       key={menu?.card?.info?.id}
@@ -99,7 +99,7 @@ const RestaurantMenu = () => {
                         </button>
                       </div>
                     </div>
-                  ))}
+                  )) : <p className="text-center">No menu available</p>}
               </div>
             </div>
           </div>
