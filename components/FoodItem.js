@@ -9,7 +9,7 @@ const FoodItem = ({ id, name, imageId, description, defaultPrice,price }) => {
     }
   return (
     <div
-      className="flex flex-cols gap-5 items-center shadow-xl p-5 justify-center"
+      className="flex flex-cols gap-5 items-center shadow-xl p-5 justify-center bg-slate-100"
       key={id}
     >
       <img src={IMAGE_CDN + imageId} alt="image" className="w-24 h-24" />

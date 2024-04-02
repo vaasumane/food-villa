@@ -41,7 +41,7 @@ appRouter = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contact",
+        path: "/help",
         element: <Contact />,
       },
       {

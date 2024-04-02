@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { restaurantList } from "../Constant";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -47,7 +46,7 @@ const Body = () => {
         <button
           type="button"
           onClick={() => filterList(searchText, AllRestaurants)}
-          className="p-2 bg-purple-600 rounded-md text-white"
+          className="p-2 bg-orange-400 rounded-md text-white"
         >
           Search
         </button>
