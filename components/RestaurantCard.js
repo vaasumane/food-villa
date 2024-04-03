@@ -13,7 +13,7 @@ const RestaurantCard = ({
     <>
       <div
         key={id}
-        className="hover:shadow-lg transition-all p-3 relative rounded-xl bg-green-50 hover:bg-green-100 p-4 h-full"
+        className="hover:shadow-lg transition-all p-3 relative rounded-xl bg-green-50 hover:bg-green-100 h-full"
       >
         <div className="">
           <img
