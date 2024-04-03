@@ -46,7 +46,7 @@ const Body = () => {
         <button
           type="button"
           onClick={() => filterList(searchText, AllRestaurants)}
-          className="p-2 bg-orange-400 rounded-md text-white"
+          className="p-2 bg-black rounded-md text-white"
         >
           Search
         </button>

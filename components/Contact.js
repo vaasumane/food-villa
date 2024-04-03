@@ -21,7 +21,6 @@ const Contact = () => {
   const [selectedValue, SetSelectedValue] = useState("section-0");
   return (
     <>
-    {console.log(faqQuestionAns)}
       <div className="section py-5 lg:mx-28">
         <div className="container mx-auto">
             <h1 className="text-4xl p-3 font-bold">Help & Support</h1>

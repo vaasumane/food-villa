@@ -7,10 +7,9 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
   return (
     <>
-      <div className="flex justify-between items-center px-4 sticky top-0 bg-white z-10 shadow-lg">
+      <div className="flex justify-between items-center px-4 sticky top-0 bg-green-50 z-10 shadow-lg">
         <div>
           <Link to="/">
             <img src={AppLogo} className="h-20" />

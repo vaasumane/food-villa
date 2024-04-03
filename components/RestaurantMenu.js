@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import useFetchRestaurantMenu from "../utils/useFetchResturantMenu";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
+// import { FaPlus } from "react-icons/fa";
+import { BiPlus } from "react-icons/bi";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
@@ -17,14 +19,14 @@ const RestaurantMenu = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="section lg:mx-28">
+      <div className="section lg:mx-36">
         <div className="container mx-auto py-10">
           <h1 className="text-center font-semibold text-4xl pb-5">
             {restaurant?.name} Restaurant
           </h1>
 
           <div className="lg:flex flex-cols gap-10 justify-center  pt-5  ">
-            <div className="relative">
+            {/* <div className="relative">
               <div className="bg-gray-100 rounded-lg p-4 flex-1 sticky top-14">
                 <div className="">
                   <div className="text-center p-5 flex justify-center">
@@ -66,40 +68,47 @@ const RestaurantMenu = () => {
                   Address: {restaurant?.labels?.[1]?.message}
                 </p>
               </div>
-            </div>
-            <div className="flex-1">
+            </div> */}
+            <div className="flex-1 ">
               <h2 className="text-center font-semibold text-xl pb-2">
                 Restaurant Menu
               </h2>
-              <div className="lg:flex justify-center  lg:flex-wrap">
-                {restaurantMenu &&
-                  restaurantMenu.length > 0 ?
+              <div className=" justify-center items-center mx-auto">
+                {restaurantMenu && restaurantMenu.length > 0 ? (
                   restaurantMenu.map((menu) => (
                     <div
                       key={menu?.card?.info?.id}
-                      className="md:flex bg-gray-100 rounded-xl gap-x-5 mb-5 p-3 lg:w-[600px] items-center mx-auto"
+                      className="flex bg-green-50 rounded-xl gap-x-5 mb-5 p-3  items-center mx-auto shadow-lg"
                     >
-                      <img
-                        src={Image_ASSET_CDN + menu?.card?.info?.imageId}
-                        className=""
-                      />
+                      <div className="w-60 h-44">
+                        <img
+                          src={Image_ASSET_CDN + menu?.card?.info?.imageId}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                       <div>
                         <h4 className="font-semibold">
-                          {menu?.card?.info?.name}
+                          {menu?.card?.info?.name} - Rs.{" "}
+                          {menu?.card?.info?.price
+                            ? menu?.card?.info?.price / 100
+                            : menu?.card?.info?.defaultPrice / 100}
                         </h4>
-                        <h5 className="font-semibold">
+                        {/* <h5 className="font-semibold">
                           Rs. {menu?.card?.info?.price ? menu?.card?.info?.price / 100:menu?.card?.info?.defaultPrice/100}
-                        </h5>
+                        </h5> */}
                         <p>{menu?.card?.info?.description}</p>
                         <button
-                          className="p-2 m-2 bg-orange-400 text-white rounded-lg"
+                          className="p-2 m-2 bg-black text-white rounded-lg flex items-center"
                           onClick={() => handleCart(menu?.card?.info)}
                         >
-                          Add Item
+                          Add <BiPlus />
                         </button>
                       </div>
                     </div>
-                  )) : <p className="text-center">No menu available</p>}
+                  ))
+                ) : (
+                  <p className="text-center">No menu available</p>
+                )}
               </div>
             </div>
           </div>

@@ -13,15 +13,15 @@ const RestaurantCard = ({
     <>
       <div
         key={id}
-        className="hover:shadow-lg transition-all p-3 relative rounded-xl"
+        className="hover:shadow-lg transition-all p-3 relative rounded-xl bg-green-50 hover:bg-green-100 p-4 h-full"
       >
         <div className="">
           <img
             src={IMAGE_CDN + cloudinaryImageId}
-            className="h-52 w-80 object-cover rounded-lg hover:scale-95"
+            className="h-52 w-60 object-cover rounded-lg hover:scale-95"
           />
         </div>
-        <div className="py-2  w-80">
+        <div className="py-2  w-60">
             <h2 className=" text-2xl font-semibold">{name}</h2>
             <span> {areaName}</span>
             <h4>{costForTwo}</h4>
