@@ -13,6 +13,7 @@ import NotConnect from "./NotConnect";
 import { Provider } from "react-redux";
 import reduxstore from "./utils/reduxstore";
 import Cart from "./components/Cart";
+import Login from "./components/Login";
 
 const AppLayout = () => {
   const IsInternetConnection = useInternetConnection();
@@ -35,6 +36,10 @@ appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
       {
         path: "/about",
