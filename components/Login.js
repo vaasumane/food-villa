@@ -41,7 +41,7 @@ const Login = () => (
           isSubmitting,
           /* and other goodies */
         }) => (
-          <div className="w-1/3 mx-auto">
+          <div className="md:w-1/3 mx-auto">
             <form onSubmit={handleSubmit}>
               <div>
                 <label className="py-1">Email </label>
