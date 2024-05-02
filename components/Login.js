@@ -51,7 +51,7 @@ const Login = () => (
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.email}
-                  className="w-full border border-slate-400 rounded-md py-2"
+                  className="w-full border border-slate-400 rounded-md p-2"
                 />
                 
                <p className="text-red-500"> {errors.email && touched.email && errors.email}</p>
@@ -66,7 +66,7 @@ const Login = () => (
                   onChange={handleChange}
                   onBlur={handleBlur}
                   value={values.password}
-                  className="w-full border border-slate-400 rounded-md py-2"
+                  className="w-full border border-slate-400 rounded-md p-2"
                 />
                <p className="text-red-500"> {errors.password && touched.password && errors.password}</p>
               </div>
